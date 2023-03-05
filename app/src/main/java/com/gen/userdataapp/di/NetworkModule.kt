@@ -4,6 +4,7 @@ import com.gen.userdataapp.BuildConfig.BASE_URL
 import com.gen.userdataapp.data.remote.api.UserApi
 import com.gen.userdataapp.utils.MoshiArrayListJsonAdapter
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.BuildConfig
@@ -38,6 +39,7 @@ val networkModule = module {
                 MoshiConverterFactory.create(
                     Moshi.Builder()
                         .add(MoshiArrayListJsonAdapter.FACTORY)
+                        .addLast(KotlinJsonAdapterFactory())
                         .build()
                 ).asLenient()
             )

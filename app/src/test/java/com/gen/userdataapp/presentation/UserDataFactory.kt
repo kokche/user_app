@@ -7,11 +7,11 @@ object UserDataFactory {
         id = 0,
         avatar = "Aang",
         email = "email",
-        isFavorite = true,
+        isFavorite = false,
         firstName = "first name",
         lastName = "last name"
     )
     val userDataList = List(5) {
-        userData.copy(id = it, firstName = "name is $it", isFavorite = (it == 2).not())
+        userData.copy(id = it, firstName = "name is $it", isFavorite = (it == 2))
     }
 }

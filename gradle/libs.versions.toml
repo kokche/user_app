@@ -57,7 +57,7 @@ koinCompose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "
 # Moshi
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshiVer" }
 moshiCodegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiVer" }
-
+moshiReflection = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshiVer" }
 # Room
 roomRuntime = { module = "androidx.room:room-runtime", version.ref = "roomVer" }
 roomPaging = { module = "androidx.room:room-paging", version.ref = "roomVer" }
@@ -81,6 +81,6 @@ roomTest = { module = "androidx.room:room-testing", version.ref = "roomVer" }
 testRuner = { module = "androidx.test:runner", version.ref = "testRunerVer" }
 [bundles]
 room = ["roomRuntime", "roomKtx"]
-moshi = ["moshi", "moshiCodegen"]
+moshi = ["moshi", "moshiCodegen", "moshiReflection"]
 coil = ["coilKt", "coilCompose"]
 compose = ["composeUi", "composeUiMaterial", "composeUiTooling", "pagingCompose"]

@@ -46,7 +46,7 @@ internal class UsersViewModelTest {
 
     @Test
     fun `check diff transformation`() = runTest {
-        val data = PagingData.from(userDataList).filter { userData -> !userData.isFavorite }
+        val data = PagingData.from(userDataList).filter { userData -> userData.isFavorite }
         val differ = AsyncPagingDataDiffer(
             diffCallback = MyDiffCallback(),
             updateCallback = NoopListCallback(),
@@ -57,7 +57,7 @@ internal class UsersViewModelTest {
 
         advanceUntilIdle()
         assertEquals(
-            listOf(userData.copy(id = 2, firstName = "name is 2", isFavorite = false)),
+            listOf(userData.copy(id = 2, firstName = "name is 2", isFavorite = true)),
             differ.snapshot().items
         )
     }

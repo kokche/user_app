@@ -26,7 +26,7 @@ class UsersViewModel(
     fun getUsers() = users.map { pagingData ->
         pagingData.filter { userData ->
             if (onlyFavorite) {
-                !userData.isFavorite
+                userData.isFavorite
             } else {
                 true
             }
