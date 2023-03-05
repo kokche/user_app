@@ -1,0 +1,86 @@
+[versions]
+common = "1.4"
+compileSdk = "33"
+compileSdkVersion = "android-33"
+minSdk = "23"
+versionName = "1.0"
+kotlinCompilerExtensionVersion = "1.4.3"
+
+coreKtx = "1.9.0"
+composeBoom = "2023.01.00"
+pagingCompose = "1.0.0-alpha18"
+
+coilVer = "2.2.2"
+lyfecycleRuntimeVer = "2.5.1"
+activityComposeVer = "1.6.1"
+kotlinReflectVer = "1.8.10"
+navigationComposeVer = "2.5.3"
+
+# Di
+koinVer = "3.3.3"
+koinCompsoeVer = "3.4.2"
+
+moshiVer = "1.14.0"
+roomVer = "2.5.0"
+retrofitVer = "2.9.0"
+okhttpVer = "4.10.0"
+junitVer = "4.13.2"
+coroutineTest = "1.6.4"
+mockitoVersion = "4.1.0"
+recyclerViewVer = "1.2.1"
+pagingRuntimeVer = "3.1.1"
+junitKtx = "1.1.5"
+testRunerVer = "1.5.2"
+[libraries]
+coreKtx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+composeBoom = { module = "androidx.compose:compose-bom", version.ref = "composeBoom" }
+
+composeUi = { module = "androidx.compose.ui:ui" }
+composeUiMaterial = { module = "androidx.compose.material:material" }
+composeUiTooling = { module = "androidx.compose.ui:ui-tooling-preview" }
+
+pagingCompose = { module = "androidx.paging:paging-compose", version.ref = "pagingCompose" }
+pagingRuntime = { module = "androidx.paging:paging-runtime-ktx", version.ref = "pagingRuntimeVer" }
+
+coilKt = { module = "io.coil-kt:coil", version.ref = "coilVer" }
+coilCompose = { module = "io.coil-kt:coil-compose", version.ref = "coilVer" }
+
+lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lyfecycleRuntimeVer" }
+activityCompose = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVer" }
+kotlinReflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlinReflectVer" }
+navigationCompose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationComposeVer" }
+recyclerView = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerViewVer" }
+# DI
+koinCore = { module = "io.insert-koin:koin-core", version.ref = "koinVer" }
+koinCompose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCompsoeVer" }
+
+# Moshi
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshiVer" }
+moshiCodegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiVer" }
+
+# Room
+roomRuntime = { module = "androidx.room:room-runtime", version.ref = "roomVer" }
+roomPaging = { module = "androidx.room:room-paging", version.ref = "roomVer" }
+roomCompiler = { module = "androidx.room:room-compiler", version.ref = "roomVer" }
+roomKtx = { module = "androidx.room:room-ktx", version.ref = "roomVer" }
+
+# Retrofit
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVer" }
+retrofitMoshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofitVer" }
+
+#OkHttp
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVer" }
+okhttpInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttpVer" }
+
+#Tests
+junit = { module = "junit:junit", version.ref = "junitVer" }
+coroutineTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutineTest" }
+mockito = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoVersion" }
+junitKtx = { module = "androidx.test.ext:junit-ktx", version.ref = "junitKtx" }
+roomTest = { module = "androidx.room:room-testing", version.ref = "roomVer" }
+testRuner = { module = "androidx.test:runner", version.ref = "testRunerVer" }
+[bundles]
+room = ["roomRuntime", "roomKtx"]
+moshi = ["moshi", "moshiCodegen"]
+coil = ["coilKt", "coilCompose"]
+compose = ["composeUi", "composeUiMaterial", "composeUiTooling", "pagingCompose"]
